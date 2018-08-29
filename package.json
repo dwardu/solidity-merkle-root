@@ -1,0 +1,29 @@
+{
+  "name": "solidity-merkle-root",
+  "version": "1.0.0",
+  "description": "A small Truffle project to study the gas consumption of Merkle root computation on the EVM",
+  "main": "index.js",
+  "scripts": {
+    "ganache": "ganache-cli --deterministic --gasLimit 0xfffffffffff --defaultBalanceEther 1000000",
+    "premain": "rimraf ./build/contracts/* && truffle migrate --reset",
+    "main": "truffle exec main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwardu/solidity-merkle-root.git"
+  },
+  "author": "Edward Grech <dwardu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dwardu/solidity-merkle-root/issues"
+  },
+  "homepage": "https://github.com/dwardu/solidity-merkle-root#readme",
+  "dependencies": {
+    "ethereumjs-util": "^5.2.0",
+    "ganache-cli": "^6.1.8",
+    "openzeppelin-solidity": "github:dwardu/openzeppelin-solidity#feature/merkle-root",
+    "rimraf": "^2.6.2",
+    "truffle": "^5.0.0-next.11",
+    "web3": "^1.0.0-beta.36"
+  }
+}
